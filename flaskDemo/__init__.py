@@ -45,5 +45,8 @@ def on_identity_loaded(sender, identity):
     # Add the UserNeed to the identity
     if hasattr(current_user, 'roleName'):
         identity.provides.add(RoleNeed(current_user.roleName))
-
+        
+        
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
     
